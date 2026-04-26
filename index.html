@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NameSat</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+
+<div class="container">
+    <h1>Your Name in Satellite Views</h1>
+    <p class="subtitle">Enter any name and generate a unique satellite mosaic</p>
+
+    <div class="input-section glass">
+        <form onsubmit="generateImage(); return false;">
+            <input type="text" id="nameInput" placeholder="Enter your name" maxlength="12">
+            <button type="submit">Generate</button>
+        </form>
+    </div>
+
+    <div id="loader" class="loader hidden"></div>
+
+    <div class="frame glass">
+        <canvas id="canvas">
+            Your browser does not support canvas.
+        </canvas>
+    </div>
+
+    <button id="downloadBtn" class="download-btn" onclick="downloadImage()">
+        ⬇ Download Image
+    </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+<footer class="footer">
+    Made with ❤️ by Pupa for Ishu ❤️
+</footer>
+
+</html>
